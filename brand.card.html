@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Brand primitives" subtitle="Logo · Petal ornaments · RingMark · HeadlineDuo" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;padding:0;background:var(--color-bg);font-family:var(--font-family-base)}
+.wrap{display:flex}
+.dark{background:var(--ocd-black);padding:26px;display:flex;gap:26px;align-items:center;flex:1}
+.orn{display:flex;gap:18px;align-items:center}</style></head>
+<body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Logo, Petal, RingMark, HeadlineDuo } = window.OrangeCyberdefenseDesignSystem_e63a01;
+const base = "../../assets/logos";
+function Demo(){return (<div className="wrap"><div className="dark">
+<HeadlineDuo lead={["Avoid","Spyware."]} accent={["Stay","Aware."]} leadColor="var(--ocd-white)" size={40} />
+<div className="orn">
+<Petal shape="quarter" corner="tl" color="var(--ocd-orange)" size={90} />
+<Petal shape="half" src="../../assets/visuals/visual-04.png" size={130} />
+<RingMark size={90} />
+</div>
+<div style={{display:'flex',flexDirection:'column',gap:14}}>
+<Logo variant="master" tone="light" height={30} basePath={base} />
+<Logo variant="small" tone="light" height={44} basePath={base} />
+</div>
+</div></div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>
